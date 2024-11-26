@@ -22,7 +22,7 @@
                              dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm
                               block mt-1 w-80"
                                 id="amount" type="number" name="amount" required="required" autofocus="autofocus"
-                                autocomplete="amount">
+                                autocomplete="amount" value="{{ old('amount')}}">
 
                             <label class="block font-medium text-sm text-gray-700 dark:text-gray-300 mt-2"
                                 for="email">
@@ -32,7 +32,7 @@
                                 class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500
                              dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm
                               block mt-1 w-80"
-                                id="date_time" type="datetime-local" name="date_time" required="required"
+                                id="date_time" type="datetime-local" name="date_time" required="required"  value="{{ old('date_time')}}"
                                 autocomplete="date_time">
 
                             <label class="block font-medium text-sm text-gray-700 dark:text-gray-300 mt-2"
@@ -45,7 +45,7 @@
                               block mt-1 w-80">
                                 <option value="" disabled selected>-- Select an option --</option>
                                 @foreach ($categories as $category)
-                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                    <option value="{{$category->id}}" @if(old('category_id') == $category->id) selected @endif>{{$category->name}}</option>
                                 @endforeach
                             </select>
 

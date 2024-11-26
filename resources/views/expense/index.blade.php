@@ -6,13 +6,13 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <div class="">
                         <a class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded " href="{{ route('expense.create') }}">Add Expenses</a>
-                        <div class="mt-4 pt-4">
-                            <table class="min-w-full border border-gray-200 rounded-lg border-collapse border border-slate-500">
+                        <div class="mt-4 pt-4 text-center">
+                            <table class="items-center w-full text_center border border-gray-600 rounded-lg border-collapse bg-gray-900 text-white divide-y divide-gray-700">
                                 <thead>
                                     <tr>
                                         <td>#</td>
@@ -30,7 +30,7 @@
                                         <td>{{number_format($expense->amount)}}</td>
                                         <td>{{$expense->category->name}}</td>
                                         <td>{{$expense->date_time}}</td>
-                                        <td class="flex flex-row">
+                                        <td class="flex justify-center items-center space-x-2">
                                             <a href="{{ route('expense.show', $expense->id)}}">
                                                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAfdJREFUSEvNl81LVUEYh5+fC2vhKqjA0nURLoraFLdCMaN2/gkuFQqCKEGoFi2KggRJN+5cCkEQClZguBKJFIM2EUFQRJEtAjfxel+ZA4fLPfeejwGd5ZyZ95n36zdzxB4N7RGXTLCZnQGuAAfbHO4XMCdpq4gTTcFmdhN4VsDQB6Bf0p+8e7LAP4HDeY2EdR+BWl54FtiCsQeS7mcdwMwOAIvA5aLwSmCHlYVXBpeFRwGXgUcDF4VHBQe49/0rb69QcG8lDTQWaHRwCv4GOO/1J6kjCtjMakDixWtJK42Gzczb8J7Pq96TlcBmdgKYB041GNoAhiV9Tuajgc3sCPAeOJYhKF+A05L+hnDH8djMZoGRAJ0BHnkUgYnU/GNJd2KDfwOHgGVJiUTunsPMVuuVfA74JOlkbPB/wKvziaTb6XCb2VPgFvBPUlds8Fegt96f7yRdagB7VV8ANiX1xQZPAWMB+DzkuBMYT+V4QtLD2GDPr1/4PS3u6WXgqqTtaO0UvMjq42/A8UQigevA3WgCkhIH1+GLwA+vcsCF4wVwLaxZAtZCGqorV4sQe0t5vl8CQ2HddvJQrCyZrcAZN9PuliJgD+HRdqCc379L6s57SdwAJnMabrdsVNJ0LnAI21lgEPCXZJnhOV6QtN5s8/77hSnjYpE9O5laLi61OSzPAAAAAElFTkSuQmCC"/>
                                             </a>

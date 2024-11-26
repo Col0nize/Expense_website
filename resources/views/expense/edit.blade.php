@@ -43,7 +43,7 @@
                                 class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500
                              dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm
                               block mt-1 w-80">
-                                <option value="" disabled selected>-- Select an option --</option>
+                                <option value="" selected>-- Select an option --</option>
                                 @foreach ($categories as $category)
                                     <option value="{{$category->id}}" @if ($category->id == $expense->category_id ) selected @endif >{{$category->name}}</option>
                                 @endforeach

@@ -36,8 +36,14 @@ class ExpenseController extends Controller
             'date_time' => $request->input('date_time'),
             'user_id' => auth()->user()->id,
             'category_id' => $request->input('category_id')
-
         ]);
+
+        // $expense = new Expense();
+
+        // $expense->amount = $request->input('amount');
+        // $expense->date_time = $request->input('date_time');
+        // $expense->user_id = auth()->user()->id;
+        // $expense->category_id = $request->input('category_id');
 
         if ($expense){ //if success
             return redirect()->route('expense.index')->with('success','Expense successfully added');
